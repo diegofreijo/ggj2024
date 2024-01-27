@@ -2461,7 +2461,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": false,
-        "zoomFactor": 11.950124388808023,
+        "zoomFactor": 2.686796875000042,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2478,7 +2478,7 @@
               "name": "Enemy1"
             },
             {
-              "name": "Enemy2"
+              "name": "Payaso"
             },
             {
               "name": "Enemy3"
@@ -2506,7 +2506,7 @@
               "name": "Enemy1"
             },
             {
-              "name": "Enemy2"
+              "name": "Payaso"
             },
             {
               "name": "Enemy3"
@@ -3983,7 +3983,7 @@
         {
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
-          "name": "Enemy2",
+          "name": "Payaso",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -3992,9 +3992,9 @@
             {
               "name": "Health",
               "type": "Health::Health",
-              "Health": 3,
+              "Health": 2,
               "CurrentHealth": 0,
-              "MaxHealth": 3,
+              "MaxHealth": 0,
               "DamageCooldown": 0,
               "IsHealthJustDamaged": false,
               "HealthRegenRate": 0,
@@ -5856,8 +5856,44 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.5,
                   "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Bullet.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 4,
+                        "y": 4
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 3
+                          },
+                          {
+                            "x": 6,
+                            "y": 3
+                          },
+                          {
+                            "x": 6,
+                            "y": 5
+                          },
+                          {
+                            "x": 2,
+                            "y": 5
+                          }
+                        ]
+                      ]
+                    },
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Bullet.png",
@@ -5940,7 +5976,7 @@
             "objectName": "Enemy1"
           },
           {
-            "objectName": "Enemy2"
+            "objectName": "Payaso"
           },
           {
             "objectName": "Enemy3"
@@ -6007,6 +6043,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Beginning of scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6431,7 +6468,7 @@
                     "value": "AnimationName"
                   },
                   "parameters": [
-                    "Enemy2",
+                    "Payaso",
                     "\"Hurt\""
                   ]
                 }
@@ -6442,7 +6479,7 @@
                     "value": "AddForceVers"
                   },
                   "parameters": [
-                    "Enemy2",
+                    "Payaso",
                     "Player",
                     "15",
                     "0"
@@ -6671,7 +6708,7 @@
                       },
                       "parameters": [
                         "",
-                        "Enemy2",
+                        "Payaso",
                         "SpiderSpawnPoints.X()",
                         "SpiderSpawnPoints.Y()",
                         ""
@@ -6682,7 +6719,7 @@
                         "value": "Health::Health::SetMaxHealthOp"
                       },
                       "parameters": [
-                        "Enemy2",
+                        "Payaso",
                         "Health",
                         "=",
                         "2 + floor(Variable(Wave)/3)",
@@ -6694,9 +6731,9 @@
                         "value": "Health::Health::SetHealth"
                       },
                       "parameters": [
-                        "Enemy2",
+                        "Payaso",
                         "Health",
-                        "Enemy2.Health::MaxHealth()",
+                        "Payaso.Health::MaxHealth()",
                         "3 + floor(Variable(Wave)/3)"
                       ]
                     },
@@ -6707,8 +6744,8 @@
                       "parameters": [
                         "",
                         "HealthBar_Enemy",
-                        "Enemy2.X()",
-                        "Enemy2.Y()",
+                        "Payaso.X()",
+                        "Payaso.Y()",
                         ""
                       ]
                     },
@@ -6719,7 +6756,7 @@
                       "parameters": [
                         "",
                         "HealthBar_Enemy",
-                        "Enemy2"
+                        "Payaso"
                       ]
                     }
                   ]
@@ -7059,6 +7096,87 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Cosquillas",
+                    "Enemies",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "Health",
+                    "Variable(Variable.Power) + 1",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "\"Hurt\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeSprite"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "HealthBar_Enemy",
+                        "Enemies",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeWidth"
+                      },
+                      "parameters": [
+                        "HealthBar_Enemy",
+                        "=",
+                        "(Enemies.Health::Health() / Enemies.Health::MaxHealth()) * 12"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
                     "value": "AnimationName"
                   },
                   "parameters": [
@@ -7220,36 +7338,6 @@
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Feather"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "Feather",
-                        "=",
-                        "Player.PointX(\"Melee\")",
-                        "=",
-                        "Player.PointY(\"Melee\")"
-                      ]
-                    }
-                  ]
-                },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
@@ -7513,143 +7601,6 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Firing melee\n"
-                },
-                {
-                  "disabled": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "FireBullet::FireBullet::HasJustFired"
-                      },
-                      "parameters": [
-                        "Gun",
-                        "FireBullet",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlaySound"
-                      },
-                      "parameters": [
-                        "",
-                        "Gun",
-                        "",
-                        "GlobalVariable(Settings.Sound)",
-                        "RandomFloatInRange(0.8,1)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "CameraShake::ShakeCamera"
-                      },
-                      "parameters": [
-                        "",
-                        "0.1",
-                        "0",
-                        "0.05",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
-                      },
-                      "parameters": [
-                        "Gun",
-                        "ShakeObject_PositionAngle",
-                        "0.1",
-                        "3",
-                        "3",
-                        "1",
-                        "0.05",
-                        "",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::And"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "value": "MouseButtonPressed"
-                              },
-                              "parameters": [
-                                "",
-                                "Right"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "SystemInfo::IsMobile"
-                              },
-                              "parameters": []
-                            }
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SpriteMultitouchJoystick::StickForce"
-                          },
-                          "parameters": [
-                            "",
-                            ">",
-                            "0",
-                            "2",
-                            "\"Secondary\"",
-                            ""
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "FireBullet::FireBullet::Fire"
-                      },
-                      "parameters": [
-                        "Feather",
-                        "FireBullet",
-                        "Feather.PointX(\"BulletPoint\")",
-                        "Feather.PointY(\"BulletPoint\")",
-                        "Cosquillas",
-                        "Gun.Angle()",
-                        "200",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
                   "comment": "Firing a bullet"
                 },
                 {
@@ -7811,6 +7762,208 @@
                       },
                       "parameters": [
                         "Bullet",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Feather",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Sprite"
+                      },
+                      "parameters": [
+                        "Cosquillas",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Cosquillas",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Feather"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "Feather",
+                        "=",
+                        "Player.PointX(\"Melee\")",
+                        "=",
+                        "Player.PointY(\"Melee\")"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Firing melee\n"
+                },
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::HasJustFired"
+                      },
+                      "parameters": [
+                        "Gun",
+                        "FireBullet",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "Gun",
+                        "",
+                        "GlobalVariable(Settings.Sound)",
+                        "RandomFloatInRange(0.8,1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CameraShake::ShakeCamera"
+                      },
+                      "parameters": [
+                        "",
+                        "0.1",
+                        "0",
+                        "0.05",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ShakeObject::ShakeObject_PositionAngle::ShakeObject_PositionAngle"
+                      },
+                      "parameters": [
+                        "Gun",
+                        "ShakeObject_PositionAngle",
+                        "0.1",
+                        "3",
+                        "3",
+                        "1",
+                        "0.05",
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "MouseButtonPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Right"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "SystemInfo::IsMobile"
+                              },
+                              "parameters": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SpriteMultitouchJoystick::StickForce"
+                          },
+                          "parameters": [
+                            "",
+                            ">",
+                            "0",
+                            "2",
+                            "\"Secondary\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Cosquillas",
+                        "Feather.PointX(\"BulletPoint\")",
+                        "Feather.PointY(\"BulletPoint\")",
                         ""
                       ]
                     }
@@ -7993,6 +8146,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Leveling",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8167,7 +8321,7 @@
                       "parameters": [
                         "Variable.CurrentEXP",
                         ">=",
-                        "Variable(Variable.MaxEXP)"
+                        "1"
                       ]
                     }
                   ],

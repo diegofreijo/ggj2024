@@ -1103,6 +1103,15 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/SpiderCharging1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\SpiderCharging1.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -4016,6 +4025,14 @@
               "IsJustDodged": false,
               "ShieldDamageTaken": 0,
               "HealToBeApplied": 0
+            },
+            {
+              "name": "RepeatTimer",
+              "type": "RepeatEveryXSeconds::RepeatTimer",
+              "TimerName": "Pausar",
+              "TimerLength": 1,
+              "Limit": -1,
+              "Counter": 0
             }
           ],
           "animations": [
@@ -4024,8 +4041,8 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": true,
-                  "timeBetweenFrames": 0.18,
+                  "looping": false,
+                  "timeBetweenFrames": 0.25,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -4156,6 +4173,60 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Spider4.png",
+                      "points": [
+                        {
+                          "name": "HealthBar",
+                          "x": 12,
+                          "y": 3
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 12,
+                        "y": 22
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 28.5
+                          },
+                          {
+                            "x": 7,
+                            "y": 28.5
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Pausa",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.5,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\SpiderCharging1.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -6404,6 +6475,178 @@
                 "textG": 0,
                 "textR": 0
               },
+              "comment": "Movimientos\n"
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "RepeatEveryXSeconds::RepeatTimer::Repeat"
+                  },
+                  "parameters": [
+                    "Payaso",
+                    "RepeatTimer",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"Caminando\"",
+                    "\"info\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseObjectTimer"
+                  },
+                  "parameters": [
+                    "Payaso",
+                    "\"Pausa\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Payaso",
+                    "Animation",
+                    "=",
+                    "\"Pausa\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                      },
+                      "parameters": [
+                        "Payaso",
+                        "Animation",
+                        "=",
+                        "\"Pausa\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                      },
+                      "parameters": [
+                        "Payaso",
+                        "Animation"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"Pausando\"",
+                    "\"info\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Payaso",
+                    "Animation",
+                    "=",
+                    "\"Walking\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                      },
+                      "parameters": [
+                        "Payaso",
+                        "Animation",
+                        "=",
+                        "\"Walking\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                      },
+                      "parameters": [
+                        "Payaso",
+                        "Animation"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"Caminando\"",
+                    "\"info\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Payaso",
+                    "Animation",
+                    "=",
+                    "\"Pausa\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
               "comment": "Enemy controls"
             },
             {
@@ -6464,12 +6707,30 @@
               "conditions": [
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "AnimationName"
+                    "value": "BuiltinCommonInstructions::And"
                   },
-                  "parameters": [
-                    "Payaso",
-                    "\"Hurt\""
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "Payaso",
+                        "\"Hurt\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "Payaso",
+                        "\"Pausa\""
+                      ]
+                    }
                   ]
                 }
               ],
@@ -6581,6 +6842,7 @@
               "comment": "Spawning enemies with the \"Enemy Spawn\" scene timer"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7002,6 +7264,7 @@
               "comment": "Enemies taking damage"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7092,6 +7355,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7206,6 +7470,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7285,6 +7550,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Player",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8731,6 +8997,10 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "RepeatTimer",
+          "type": "RepeatEveryXSeconds::RepeatTimer"
+        },
+        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
@@ -8763,6 +9033,551 @@
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "author": "VegeTato, arthuro555",
+      "category": "General",
+      "extensionNamespace": "",
+      "fullName": "Repeat every X seconds",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXJlcGVhdCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xNywxN0g3VjE0TDMsMThMNywyMlYxOUgxOVYxM0gxN003LDdIMTdWMTBMMjEsNkwxNywyVjVINVYxMUg3VjdaIiAvPjwvc3ZnPg==",
+      "name": "RepeatEveryXSeconds",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/repeat.svg",
+      "shortDescription": "This allows to trigger an event every X seconds.",
+      "version": "0.1.0",
+      "description": "Convenience conditions, actions and behaviors for timers to trigger a condition every X seconds.",
+      "origin": {
+        "identifier": "RepeatEveryXSeconds",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "repeat",
+        "timer",
+        "time",
+        "convenience"
+      ],
+      "authorIds": [
+        "ZgrsWuRTAkXgeuPV9bo0zuEcA2w1",
+        "IRIhkkTTl2UHhfjrLTTH5GYwkYu1"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [
+        {
+          "description": "Triggers every X seconds.",
+          "fullName": "Repeat every X seconds",
+          "functionType": "Condition",
+          "name": "Repeat",
+          "sentence": "Repeat timer _PARAM1_ every _PARAM2_ seconds",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "player",
+                    "GetArgumentAsString(\"timerName\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "player",
+                    "GetArgumentAsNumber(\"time\")",
+                    "GetArgumentAsString(\"timerName\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "player",
+                    "GetArgumentAsString(\"timerName\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "The name of the timer to loop",
+              "name": "timerName",
+              "type": "string"
+            },
+            {
+              "description": "The time in seconds between each trigger",
+              "name": "time",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Triggers every X seconds X amount of times.",
+          "fullName": "Repeat every X seconds in X number",
+          "functionType": "Condition",
+          "name": "RepeatXTimes",
+          "sentence": "Repeat timer _PARAM1_ every _PARAM2_ seconds _PARAM3_ times",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "player",
+                    "GetArgumentAsString(\"timerName\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "__RepeatEveryXSeconds_.Counter[GetArgumentAsString(\"timerName\")]",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "player",
+                    "GetArgumentAsNumber(\"time\")",
+                    "GetArgumentAsString(\"timerName\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "Egal"
+                      },
+                      "parameters": [
+                        "GetArgumentAsNumber(\"limit\")",
+                        "=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "__RepeatEveryXSeconds_.Counter[GetArgumentAsString(\"timerName\")]",
+                        "<",
+                        "GetArgumentAsNumber(\"limit\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "player",
+                    "GetArgumentAsString(\"timerName\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "__RepeatEveryXSeconds_.Counter[GetArgumentAsString(\"timerName\")]",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "The name of the timer to loop",
+              "name": "timerName",
+              "type": "string"
+            },
+            {
+              "description": "The time in seconds between each trigger",
+              "name": "time",
+              "type": "expression"
+            },
+            {
+              "description": "The limit of loops",
+              "longDescription": "The condition will trigger at most this amount of times. Make it -1 for looping forever.",
+              "name": "limit",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Allows to repeat an object timer every X seconds.",
+          "fullName": "Repeat every X seconds",
+          "name": "RepeatTimer",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Object.Behavior::PropertyTimerName()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "RepeatEveryXSeconds::RepeatTimer",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Triggers every X seconds, where X is defined in the behavior properties.",
+              "fullName": "Repeat every X seconds",
+              "functionType": "Condition",
+              "name": "Repeat",
+              "sentence": "Recurring timer _PARAM1_ of _PARAM0_ has triggered",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Object.Behavior::PropertyTimerName()",
+                        "Object.Behavior::PropertyTimerLength()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "RepeatEveryXSeconds::RepeatTimer::PropertyLimit"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "-1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "RepeatEveryXSeconds::RepeatTimer::PropertyCounter"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "<",
+                            "Object.Behavior::PropertyLimit()"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Object.Behavior::PropertyTimerName()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "RepeatEveryXSeconds::RepeatTimer::SetPropertyCounter"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "RepeatEveryXSeconds::RepeatTimer",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Pauses a recurring timer.",
+              "fullName": "Pause a recurring timer",
+              "functionType": "Action",
+              "name": "Pause",
+              "sentence": "Pause recurring timer _PARAM1_ of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PauseObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Object.Behavior::PropertyTimerName()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "RepeatEveryXSeconds::RepeatTimer",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Resumes a paused recurring timer.",
+              "fullName": "Resume a recurring timer",
+              "functionType": "Action",
+              "name": "Resume",
+              "sentence": "Resume recurring timer _PARAM1_ of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "UnPauseObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Object.Behavior::PropertyTimerName()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "RepeatEveryXSeconds::RepeatTimer",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Allows to trigger the recurring timer X times again.",
+              "fullName": "Reset the limit",
+              "functionType": "Action",
+              "name": "ResetLimit",
+              "sentence": "Allow to trigger the recurring timer _PARAM1_ of _PARAM0_ X times again",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "RepeatEveryXSeconds::RepeatTimer::SetPropertyCounter"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "RepeatEveryXSeconds::RepeatTimer",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "MyTimer",
+              "type": "String",
+              "label": "The name of the timer to repeat",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "TimerName"
+            },
+            {
+              "value": "1",
+              "type": "Number",
+              "label": "The time between each trigger (in seconds)",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "TimerLength"
+            },
+            {
+              "value": "-1",
+              "type": "Number",
+              "label": "How many times should the timer trigger? -1 for forever.",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "Limit"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "An internal counter",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "Counter"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
     {
       "author": "",
       "category": "Input",

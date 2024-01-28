@@ -1478,6 +1478,42 @@
           "value": 50
         }
       ]
+    },
+    {
+      "name": "Variable",
+      "type": "structure",
+      "children": [
+        {
+          "folded": true,
+          "name": "Accuracy",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "folded": true,
+          "name": "CurrentEXP",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "FireRate",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "folded": true,
+          "name": "MaxEXP",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "folded": true,
+          "name": "Power",
+          "type": "number",
+          "value": 1
+        }
+      ]
     }
   ],
   "layouts": [
@@ -2524,7 +2560,7 @@
               },
               "parameters": [
                 "",
-                "\"Canutito\"",
+                "\"Nivel1\"",
                 ""
               ]
             }
@@ -2734,8 +2770,8 @@
     {
       "b": 37,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Canutito",
-      "name": "Canutito",
+      "mangledName": "Nivel1",
+      "name": "Nivel1",
       "r": 24,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -2751,7 +2787,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": false,
-        "zoomFactor": 2.599152591679695,
+        "zoomFactor": 2.777396552483599,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2806,57 +2842,22 @@
       ],
       "variables": [
         {
-          "name": "Variable",
-          "type": "structure",
-          "children": [
-            {
-              "folded": true,
-              "name": "Accuracy",
-              "type": "number",
-              "value": 1
-            },
-            {
-              "folded": true,
-              "name": "CurrentEXP",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "folded": true,
-              "name": "FireRate",
-              "type": "number",
-              "value": 1
-            },
-            {
-              "folded": true,
-              "name": "MaxEXP",
-              "type": "number",
-              "value": 10
-            },
-            {
-              "folded": true,
-              "name": "Power",
-              "type": "number",
-              "value": 1
-            }
-          ]
+          "folded": true,
+          "name": "PayasosRestantes",
+          "type": "number",
+          "value": 15
         },
         {
           "folded": true,
-          "name": "Wave",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "RandomEnemy",
+          "name": "TikisRestantes",
           "type": "number",
           "value": 0
         },
         {
           "folded": true,
-          "name": "EnemigosRestantes",
+          "name": "BananasRestantes",
           "type": "number",
-          "value": 5
+          "value": 0
         }
       ],
       "instances": [
@@ -3176,22 +3177,6 @@
           "x": 832,
           "y": 16,
           "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 40,
-          "layer": "UI",
-          "name": "WaveNumber",
-          "persistentUuid": "ae112c77-f8ca-44d4-a1df-120d532c883d",
-          "width": 251,
-          "x": 5,
-          "y": 391,
-          "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4190,7 +4175,7 @@
               "type": "Health::Health",
               "Health": 2,
               "CurrentHealth": 0,
-              "MaxHealth": 0,
+              "MaxHealth": 2,
               "DamageCooldown": 0,
               "IsHealthJustDamaged": false,
               "HealthRegenRate": 0,
@@ -5722,27 +5707,6 @@
           }
         },
         {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "WaveNumber",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Wave: 1",
-          "font": "Kenney Mini Square.ttf",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
-          }
-        },
-        {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "EnemyBullet",
@@ -6394,9 +6358,6 @@
             "objectName": "AccuracyButton"
           },
           {
-            "objectName": "WaveNumber"
-          },
-          {
             "objectName": "EnemyBullet"
           },
           {
@@ -6711,62 +6672,6 @@
                     "",
                     "\"Enemy Spawn\""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Wave\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CompareTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Wave\"",
-                    ">",
-                    "30"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "Wave",
-                    "+",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "WaveNumber",
-                    "=",
-                    "\"Wave: \" + ToString(Variable(Wave))"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Wave\""
-                  ]
                 }
               ]
             },
@@ -6887,6 +6792,7 @@
               "comment": "Enemy controls"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7079,7 +6985,6 @@
               "comment": "Spawning enemies with the \"Enemy Spawn\" scene timer"
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7090,7 +6995,7 @@
                     "",
                     "\"Enemy Spawn\"",
                     ">",
-                    "3/Variable(Wave)"
+                    "2"
                   ]
                 },
                 {
@@ -7215,29 +7120,6 @@
                     },
                     {
                       "type": {
-                        "value": "Health::Health::SetMaxHealthOp"
-                      },
-                      "parameters": [
-                        "Payaso",
-                        "Health",
-                        "=",
-                        "2 + floor(Variable(Wave)/3)",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Health::Health::SetHealth"
-                      },
-                      "parameters": [
-                        "Payaso",
-                        "Health",
-                        "Payaso.Health::MaxHealth()",
-                        "3 + floor(Variable(Wave)/3)"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "Create"
                       },
                       "parameters": [
@@ -7261,6 +7143,7 @@
                   ]
                 },
                 {
+                  "disabled": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -7284,18 +7167,6 @@
                         "Tiki",
                         "SpawnPoints.X()",
                         "SpawnPoints.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Health::Health::SetMaxHealthOp"
-                      },
-                      "parameters": [
-                        "Tiki",
-                        "Health",
-                        "=",
-                        "3 + floor(Variable(Wave)/3)",
                         ""
                       ]
                     },
@@ -7335,6 +7206,7 @@
                   ]
                 },
                 {
+                  "disabled": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -7358,18 +7230,6 @@
                         "Banana",
                         "SpawnPoints.X()",
                         "SpawnPoints.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Health::Health::SetMaxHealthOp"
-                      },
-                      "parameters": [
-                        "Banana",
-                        "Health",
-                        "=",
-                        "4 + floor(Variable(Wave)/3)",
                         ""
                       ]
                     },
@@ -7419,16 +7279,6 @@
                       "parameters": [
                         "",
                         "\"Enemy Spawn\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "RandomEnemy",
-                        "=",
-                        "RandomInRange(0,min(floor(Variable(Wave)/3),2))"
                       ]
                     }
                   ]
@@ -7727,7 +7577,7 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
-                    "EnemigosRestantes",
+                    "PayasosRestantes",
                     "-",
                     "1"
                   ]
@@ -7737,7 +7587,7 @@
                     "value": "DebuggerTools::ConsoleLog"
                   },
                   "parameters": [
-                    "ToString(Variable(EnemigosRestantes))",
+                    "ToString(Variable(PayasosRestantes))",
                     "\"info\"",
                     ""
                   ]
@@ -7808,7 +7658,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Player",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7858,6 +7707,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Gun",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8311,6 +8161,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Feather",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8751,12 +8602,40 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "VarScene"
+                        "value": "BuiltinCommonInstructions::And"
                       },
-                      "parameters": [
-                        "EnemigosRestantes",
-                        "<=",
-                        "0"
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "PayasosRestantes",
+                            "<=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "TikisRestantes",
+                            "<=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "BananasRestantes",
+                            "<=",
+                            "0"
+                          ]
+                        }
                       ]
                     }
                   ],
@@ -8777,26 +8656,6 @@
                       "parameters": [
                         "",
                         "\"LevelUp\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Variable.CurrentEXP",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "EnemigosRestantes",
-                        "=",
-                        "5"
                       ]
                     }
                   ]
@@ -8966,22 +8825,6 @@
                             "=",
                             "Gun.FireBullet::AngleVariance()*0.9",
                             ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "BitmapText::BitmapTextObject::SetText"
-                          },
-                          "parameters": [
-                            "Stats",
-                            "=",
-                            "\"Power: \" + ToString(Variable(Variable.Power)) + \"\nFire Rate: \" + ToString(Variable(Variable.FireRate)) + \"\nAccuracy: \" + ToString(Variable(Variable.Accuracy))"
                           ]
                         }
                       ]

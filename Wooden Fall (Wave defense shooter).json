@@ -1374,6 +1374,15 @@
         "name": "Sin título.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Canutito (1).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Canutito (1).png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1528,7 +1537,7 @@
       "title": "",
       "v": 20,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridType": "rectangular",
         "gridWidth": 32,
         "gridHeight": 32,
@@ -1536,7 +1545,7 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": true,
+        "snap": false,
         "zoomFactor": 1.00680645833148,
         "windowMask": false
       },
@@ -2224,6 +2233,66 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Canutito (1).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 384,
+                            "y": 0
+                          },
+                          {
+                            "x": 384,
+                            "y": 216
+                          },
+                          {
+                            "x": 0,
+                            "y": 216
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2264,6 +2333,9 @@
           },
           {
             "objectName": "NewSprite"
+          },
+          {
+            "objectName": "NewSprite2"
           }
         ]
       },
@@ -2842,6 +2914,38 @@
       ],
       "variables": [
         {
+          "name": "Spawns",
+          "type": "structure",
+          "children": [
+            {
+              "folded": true,
+              "name": "Banana",
+              "persistentUuid": "1f086cd1-9f9a-4ee8-9dd2-ba8719766cc8",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "folded": true,
+              "name": "Payasos",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "folded": true,
+              "name": "Tiki",
+              "persistentUuid": "ea98fb09-bddd-4a90-891b-3f1a78485be7",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "name": "EnemigoRandom",
+          "type": "number",
+          "value": 0
+        },
+        {
           "folded": true,
           "name": "PayasosRestantes",
           "type": "number",
@@ -2858,6 +2962,42 @@
           "name": "BananasRestantes",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Enemigos",
+          "type": "array",
+          "children": [
+            {
+              "folded": true,
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "type": "number",
+              "value": 1
+            },
+            {
+              "folded": true,
+              "type": "number",
+              "value": 2
+            },
+            {
+              "folded": true,
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "type": "number",
+              "value": 0
+            }
+          ]
         }
       ],
       "instances": [
@@ -6364,7 +6504,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Beginning of scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6999,6 +7138,16 @@
                   "conditions": [
                     {
                       "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "EnemigoRandom",
+                        "<",
+                        "6"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "AjoutHasard"
                       },
                       "parameters": [
@@ -7117,7 +7266,6 @@
                   ]
                 },
                 {
-                  "disabled": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -7125,9 +7273,9 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "RandomEnemy",
-                        "=",
-                        "1"
+                        "EnemigoRandom",
+                        "<",
+                        "9"
                       ]
                     }
                   ],
@@ -7180,7 +7328,6 @@
                   ]
                 },
                 {
-                  "disabled": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -7188,9 +7335,9 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "RandomEnemy",
-                        "=",
-                        "2"
+                        "EnemigoRandom",
+                        "<",
+                        "10"
                       ]
                     }
                   ],
@@ -7253,6 +7400,16 @@
                       "parameters": [
                         "",
                         "\"Enemy Spawn\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "EnemigoRandom",
+                        "=",
+                        "RandomInRange(0, 10)"
                       ]
                     }
                   ]
@@ -7668,7 +7825,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Gun",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8122,7 +8278,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Feather",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8494,6 +8649,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Leveling",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9043,7 +9199,7 @@
           "folded": true,
           "name": "TikisRestantes",
           "type": "number",
-          "value": 0
+          "value": 1
         },
         {
           "folded": true,

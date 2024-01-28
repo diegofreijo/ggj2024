@@ -1112,6 +1112,141 @@
         "name": "assets\\SpiderCharging1.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/Enemy 1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\Enemy 1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/Enemy 2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\Enemy 2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/Enemy 3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\Enemy 3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/Enemy 4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\Enemy 4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/Enemy 5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\Enemy 5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/Enemy 6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\Enemy 6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/Enemy 7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\Enemy 7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/Enemy 8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\Enemy 8.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/Enemy 9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\Enemy 9.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/Enemy 10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\Enemy 10.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/EnemyB1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\EnemyB1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/EnemyB2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\EnemyB2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/EnemyB3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\EnemyB3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/EnemyC1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\EnemyC1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/ASSET PNG/EnemyC2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\ASSET PNG\\EnemyC2.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2470,7 +2605,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": false,
-        "zoomFactor": 2.686796875000042,
+        "zoomFactor": 1.3389693172845611,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2484,13 +2619,13 @@
               "name": "Bullet"
             },
             {
-              "name": "Enemy1"
+              "name": "Tiki"
             },
             {
               "name": "Payaso"
             },
             {
-              "name": "Enemy3"
+              "name": "Banana"
             }
           ]
         },
@@ -2512,13 +2647,13 @@
           "name": "Enemies",
           "objects": [
             {
-              "name": "Enemy1"
+              "name": "Tiki"
             },
             {
               "name": "Payaso"
             },
             {
-              "name": "Enemy3"
+              "name": "Banana"
             }
           ]
         }
@@ -2570,6 +2705,12 @@
           "name": "RandomEnemy",
           "type": "number",
           "value": 0
+        },
+        {
+          "folded": true,
+          "name": "EnemigosRestantes",
+          "type": "number",
+          "value": 5
         }
       ],
       "instances": [
@@ -2811,22 +2952,6 @@
           "x": 817,
           "y": -40,
           "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 32,
-          "height": 28,
-          "layer": "UI",
-          "name": "RedFlatBar",
-          "persistentUuid": "e8983d4c-378d-446e-ade0-511a3445b7c4",
-          "width": 768,
-          "x": 0,
-          "y": 7,
-          "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3577,7 +3702,7 @@
         {
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
-          "name": "Enemy1",
+          "name": "Tiki",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -3637,7 +3762,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Ghost1.png",
+                      "image": "assets\\ASSET PNG\\EnemyB1.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -3679,7 +3804,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Ghost2.png",
+                      "image": "assets\\ASSET PNG\\EnemyB2.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -3721,49 +3846,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Ghost3.png",
-                      "points": [
-                        {
-                          "name": "HealthBar",
-                          "x": 12,
-                          "y": 3
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 12,
-                        "y": 26
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 7,
-                            "y": 8
-                          },
-                          {
-                            "x": 17,
-                            "y": 8
-                          },
-                          {
-                            "x": 17,
-                            "y": 28.5
-                          },
-                          {
-                            "x": 7,
-                            "y": 28.5
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Ghost4.png",
+                      "image": "assets\\ASSET PNG\\EnemyB3.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -3817,7 +3900,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Ghost_Hurt1.png",
+                      "image": "assets\\ASSET PNG\\EnemyB1.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -3859,7 +3942,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Ghost_Hurt2.png",
+                      "image": "assets\\ASSET PNG\\EnemyB2.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -3901,49 +3984,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Ghost_Hurt3.png",
-                      "points": [
-                        {
-                          "name": "HealthBar",
-                          "x": 12,
-                          "y": 3
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 12,
-                        "y": 26
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 7,
-                            "y": 8
-                          },
-                          {
-                            "x": 17,
-                            "y": 8
-                          },
-                          {
-                            "x": 17,
-                            "y": 28.5
-                          },
-                          {
-                            "x": 7,
-                            "y": 28.5
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Ghost_Hurt4.png",
+                      "image": "assets\\ASSET PNG\\EnemyB3.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -4025,14 +4066,6 @@
               "IsJustDodged": false,
               "ShieldDamageTaken": 0,
               "HealToBeApplied": 0
-            },
-            {
-              "name": "RepeatTimer",
-              "type": "RepeatEveryXSeconds::RepeatTimer",
-              "TimerName": "Pausar",
-              "TimerLength": 1,
-              "Limit": -1,
-              "Counter": 0
             }
           ],
           "animations": [
@@ -4046,7 +4079,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Spider1.png",
+                      "image": "assets\\ASSET PNG\\Enemy 1.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -4088,7 +4121,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Spider2.png",
+                      "image": "assets\\ASSET PNG\\Enemy 2.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -4130,7 +4163,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Spider3.png",
+                      "image": "assets\\ASSET PNG\\Enemy 3.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -4172,7 +4205,259 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Spider4.png",
+                      "image": "assets\\ASSET PNG\\Enemy 4.png",
+                      "points": [
+                        {
+                          "name": "HealthBar",
+                          "x": 12,
+                          "y": 3
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 12,
+                        "y": 22
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 28.5
+                          },
+                          {
+                            "x": 7,
+                            "y": 28.5
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\ASSET PNG\\Enemy 5.png",
+                      "points": [
+                        {
+                          "name": "HealthBar",
+                          "x": 12,
+                          "y": 3
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 12,
+                        "y": 22
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 28.5
+                          },
+                          {
+                            "x": 7,
+                            "y": 28.5
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\ASSET PNG\\Enemy 6.png",
+                      "points": [
+                        {
+                          "name": "HealthBar",
+                          "x": 12,
+                          "y": 3
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 12,
+                        "y": 22
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 28.5
+                          },
+                          {
+                            "x": 7,
+                            "y": 28.5
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\ASSET PNG\\Enemy 7.png",
+                      "points": [
+                        {
+                          "name": "HealthBar",
+                          "x": 12,
+                          "y": 3
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 12,
+                        "y": 22
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 28.5
+                          },
+                          {
+                            "x": 7,
+                            "y": 28.5
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\ASSET PNG\\Enemy 8.png",
+                      "points": [
+                        {
+                          "name": "HealthBar",
+                          "x": 12,
+                          "y": 3
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 12,
+                        "y": 22
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 28.5
+                          },
+                          {
+                            "x": 7,
+                            "y": 28.5
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\ASSET PNG\\Enemy 9.png",
+                      "points": [
+                        {
+                          "name": "HealthBar",
+                          "x": 12,
+                          "y": 3
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 12,
+                        "y": 22
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 8
+                          },
+                          {
+                            "x": 17,
+                            "y": 28.5
+                          },
+                          {
+                            "x": 7,
+                            "y": 28.5
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\ASSET PNG\\Enemy 10.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -4226,7 +4511,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\SpiderCharging1.png",
+                      "image": "assets\\ASSET PNG\\Enemy 1.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -4455,7 +4740,7 @@
         {
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
-          "name": "Enemy3",
+          "name": "Banana",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -4545,7 +4830,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "ImpFly1.png",
+                      "image": "assets\\ASSET PNG\\EnemyC1.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -4587,49 +4872,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "ImpFly2.png",
-                      "points": [
-                        {
-                          "name": "HealthBar",
-                          "x": 12,
-                          "y": 3
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 16,
-                        "y": 28
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 7,
-                            "y": 8
-                          },
-                          {
-                            "x": 17,
-                            "y": 8
-                          },
-                          {
-                            "x": 17,
-                            "y": 28.5
-                          },
-                          {
-                            "x": 7,
-                            "y": 28.5
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "ImpFly3.png",
+                      "image": "assets\\ASSET PNG\\EnemyC2.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -4683,7 +4926,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "ImpHurt.png",
+                      "image": "assets\\ASSET PNG\\EnemyC1.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -4725,91 +4968,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "ImpFly5.png",
-                      "points": [
-                        {
-                          "name": "HealthBar",
-                          "x": 12,
-                          "y": 3
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 16,
-                        "y": 28
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 7,
-                            "y": 8
-                          },
-                          {
-                            "x": 17,
-                            "y": 8
-                          },
-                          {
-                            "x": 17,
-                            "y": 28.5
-                          },
-                          {
-                            "x": 7,
-                            "y": 28.5
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "ImpFly6.png",
-                      "points": [
-                        {
-                          "name": "HealthBar",
-                          "x": 12,
-                          "y": 3
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 16,
-                        "y": 28
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 7,
-                            "y": 8
-                          },
-                          {
-                            "x": 17,
-                            "y": 8
-                          },
-                          {
-                            "x": 17,
-                            "y": 28.5
-                          },
-                          {
-                            "x": 7,
-                            "y": 28.5
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "ImpFly5.png",
+                      "image": "assets\\ASSET PNG\\EnemyC2.png",
                       "points": [
                         {
                           "name": "HealthBar",
@@ -6044,13 +6203,13 @@
             "objectName": "Cosquillas"
           },
           {
-            "objectName": "Enemy1"
+            "objectName": "Tiki"
           },
           {
             "objectName": "Payaso"
           },
           {
-            "objectName": "Enemy3"
+            "objectName": "Banana"
           },
           {
             "objectName": "Center"
@@ -6478,54 +6637,6 @@
               "comment": "Movimientos\n"
             },
             {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "RepeatEveryXSeconds::RepeatTimer::Repeat"
-                  },
-                  "parameters": [
-                    "Payaso",
-                    "RepeatTimer",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "\"Caminando\"",
-                    "\"info\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PauseObjectTimer"
-                  },
-                  "parameters": [
-                    "Payaso",
-                    "\"Pausa\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "Payaso",
-                    "Animation",
-                    "=",
-                    "\"Pausa\""
-                  ]
-                }
-              ]
-            },
-            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6558,16 +6669,6 @@
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "\"Pausando\"",
-                    "\"info\"",
-                    ""
-                  ]
-                },
                 {
                   "type": {
                     "value": "AnimatableCapability::AnimatableBehavior::SetName"
@@ -6616,16 +6717,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "\"Caminando\"",
-                    "\"info\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "AnimatableCapability::AnimatableBehavior::SetName"
                   },
                   "parameters": [
@@ -6658,7 +6749,7 @@
                     "value": "AnimationName"
                   },
                   "parameters": [
-                    "Enemy3",
+                    "Banana",
                     "\"Hurt\""
                   ]
                 }
@@ -6669,7 +6760,7 @@
                     "value": "BoidsMovement::BoidsMovement::MoveToObject"
                   },
                   "parameters": [
-                    "Enemy3",
+                    "Banana",
                     "BoidsMovement",
                     "Player",
                     "0.5",
@@ -6687,10 +6778,10 @@
                         "value": "FireBullet::FireBullet::FireTowardPosition"
                       },
                       "parameters": [
-                        "Enemy3",
+                        "Banana",
                         "FireBullet",
-                        "Enemy3.CenterX()",
-                        "Enemy3.CenterY()",
+                        "Banana.CenterX()",
+                        "Banana.CenterY()",
                         "EnemyBullet",
                         "Player.CenterX()",
                         "Player.CenterY()",
@@ -6757,7 +6848,7 @@
                     "value": "AnimationName"
                   },
                   "parameters": [
-                    "Enemy1",
+                    "Tiki",
                     "\"Hurt\""
                   ]
                 }
@@ -6768,7 +6859,7 @@
                     "value": "BoidsMovement::BoidsMovement::MoveToObject"
                   },
                   "parameters": [
-                    "Enemy1",
+                    "Tiki",
                     "BoidsMovement",
                     "Player",
                     "0.5",
@@ -7044,7 +7135,7 @@
                       },
                       "parameters": [
                         "",
-                        "Enemy1",
+                        "Tiki",
                         "SpawnPoints.X()",
                         "SpawnPoints.Y()",
                         ""
@@ -7055,7 +7146,7 @@
                         "value": "Health::Health::SetMaxHealthOp"
                       },
                       "parameters": [
-                        "Enemy1",
+                        "Tiki",
                         "Health",
                         "=",
                         "3 + floor(Variable(Wave)/3)",
@@ -7067,9 +7158,9 @@
                         "value": "Health::Health::SetHealth"
                       },
                       "parameters": [
-                        "Enemy1",
+                        "Tiki",
                         "Health",
-                        "Enemy1.Health::MaxHealth()",
+                        "Tiki.Health::MaxHealth()",
                         "3 + floor(Variable(Wave)/3)"
                       ]
                     },
@@ -7080,8 +7171,8 @@
                       "parameters": [
                         "",
                         "HealthBar_Enemy",
-                        "Enemy1.X()",
-                        "Enemy1.Y()",
+                        "Tiki.X()",
+                        "Tiki.Y()",
                         ""
                       ]
                     },
@@ -7092,7 +7183,7 @@
                       "parameters": [
                         "",
                         "HealthBar_Enemy",
-                        "Enemy1"
+                        "Tiki"
                       ]
                     }
                   ]
@@ -7118,7 +7209,7 @@
                       },
                       "parameters": [
                         "",
-                        "Enemy3",
+                        "Banana",
                         "SpawnPoints.X()",
                         "SpawnPoints.Y()",
                         ""
@@ -7129,7 +7220,7 @@
                         "value": "Health::Health::SetMaxHealthOp"
                       },
                       "parameters": [
-                        "Enemy3",
+                        "Banana",
                         "Health",
                         "=",
                         "4 + floor(Variable(Wave)/3)",
@@ -7141,9 +7232,9 @@
                         "value": "Health::Health::SetHealth"
                       },
                       "parameters": [
-                        "Enemy3",
+                        "Banana",
                         "Health",
-                        "Enemy3.Health::MaxHealth()",
+                        "Banana.Health::MaxHealth()",
                         "3 + floor(Variable(Wave)/3)"
                       ]
                     },
@@ -7154,8 +7245,8 @@
                       "parameters": [
                         "",
                         "HealthBar_Enemy",
-                        "Enemy3.X()",
-                        "Enemy3.Y()",
+                        "Banana.X()",
+                        "Banana.Y()",
                         ""
                       ]
                     },
@@ -7166,7 +7257,7 @@
                       "parameters": [
                         "",
                         "HealthBar_Enemy",
-                        "Enemy3"
+                        "Banana"
                       ]
                     }
                   ]
@@ -7484,7 +7575,28 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "EnemigosRestantes",
+                    "-",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "ToString(Variable(EnemigosRestantes))",
+                    "\"info\"",
+                    ""
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -8412,7 +8524,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Leveling",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8475,107 +8586,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Collecting EXP_Points"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "Distance"
-                      },
-                      "parameters": [
-                        "EXP_Point",
-                        "Player",
-                        "50",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AddForceVers"
-                      },
-                      "parameters": [
-                        "EXP_Point",
-                        "Player",
-                        "100",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "Distance"
-                      },
-                      "parameters": [
-                        "EXP_Point",
-                        "Player",
-                        "3",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "EXP_Point",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Variable.CurrentEXP",
-                        "+",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
-                      },
-                      "parameters": [
-                        "RedFlatBar",
-                        "=",
-                        "Variable(Variable.MaxEXP)",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                      },
-                      "parameters": [
-                        "RedFlatBar",
-                        "=",
-                        "Variable(Variable.CurrentEXP)",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Showing the LevelUP layer when CurrenctEXP variable reaches MaxEXP"
+                  "comment": "Ventana de fin de nivel"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -8585,9 +8596,9 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "Variable.CurrentEXP",
-                        ">=",
-                        "1"
+                        "EnemigosRestantes",
+                        "<=",
+                        "0"
                       ]
                     }
                   ],
@@ -8625,31 +8636,9 @@
                         "value": "ModVarScene"
                       },
                       "parameters": [
-                        "Variable.MaxEXP",
+                        "EnemigosRestantes",
                         "=",
-                        "floor(Variable(Variable.MaxEXP)*1.5)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                      },
-                      "parameters": [
-                        "RedFlatBar",
-                        "=",
-                        "Variable(Variable.CurrentEXP)",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
-                      },
-                      "parameters": [
-                        "RedFlatBar",
-                        "=",
-                        "Variable(Variable.MaxEXP)",
-                        ""
+                        "5"
                       ]
                     }
                   ]
@@ -8997,10 +8986,6 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
-          "name": "RepeatTimer",
-          "type": "RepeatEveryXSeconds::RepeatTimer"
-        },
-        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
@@ -9027,6 +9012,123 @@
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "UX",
+      "name": "UX",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.9114583333333334,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": []
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "NewSprite"
+          }
+        ]
+      },
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "FlashTransitionPainter",
+          "type": "FlashTransitionPainter::FlashTransitionPainter"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
         }
       ]
     }

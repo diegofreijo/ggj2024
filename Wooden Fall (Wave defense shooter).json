@@ -1392,6 +1392,24 @@
         "name": "Canutito 2.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "DisparoFuerte.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"DisparoFuerte.png\",\"extension\":\".png\"}",
+        "name": "DisparoFuerte.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Disparo.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"Disparo.png\",\"extension\":\".png\"}",
+        "name": "Disparo.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -3962,16 +3980,53 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Disparo",
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Bullet.png",
+                      "image": "Disparo.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 4,
+                        "y": 4
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 3
+                          },
+                          {
+                            "x": 6,
+                            "y": 3
+                          },
+                          {
+                            "x": 6,
+                            "y": 5
+                          },
+                          {
+                            "x": 2,
+                            "y": 5
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "DisparoFuerte.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",

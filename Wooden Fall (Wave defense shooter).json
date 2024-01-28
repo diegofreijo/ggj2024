@@ -2787,7 +2787,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": false,
-        "zoomFactor": 2.777396552483599,
+        "zoomFactor": 2.6867968750000437,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2845,7 +2845,7 @@
           "folded": true,
           "name": "PayasosRestantes",
           "type": "number",
-          "value": 15
+          "value": 1
         },
         {
           "folded": true,
@@ -4206,7 +4206,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.25,
+                  "timeBetweenFrames": 0.1,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -7015,16 +7015,6 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "RandomEnemy",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "AjoutHasard"
                       },
                       "parameters": [
@@ -7379,19 +7369,6 @@
                 },
                 {
                   "type": {
-                    "value": "Health::Health::Hit"
-                  },
-                  "parameters": [
-                    "Enemies",
-                    "Health",
-                    "Variable(Variable.Power)",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetAnimationName"
                   },
                   "parameters": [
@@ -7407,6 +7384,19 @@
                     "Enemies",
                     "=",
                     "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "Health",
+                    "GlobalVariable(Variable.Power)",
+                    "",
+                    "",
+                    ""
                   ]
                 }
               ],
@@ -7466,7 +7456,7 @@
                   "parameters": [
                     "Enemies",
                     "Health",
-                    "Variable(Variable.Power) + 1",
+                    "GlobalVariable(Variable.Power)+1",
                     "",
                     "",
                     ""
@@ -7557,7 +7547,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7625,18 +7614,6 @@
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "EXP_Point",
-                        "Enemies.X()",
-                        "Enemies.Y()",
-                        ""
-                      ]
-                    },
                     {
                       "type": {
                         "value": "Delete"
@@ -8533,6 +8510,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Leveling",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",

@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "Menu Principal",
   "gdVersion": {
     "build": 99,
     "major": 4,
@@ -1247,6 +1247,133 @@
         "name": "assets\\ASSET PNG\\EnemyC2.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Xelu_Free_Controller&Key_Prompts/Keyboard & Mouse/Blanks/Blank_White_Mouse.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Xelu_Free_Controller&Key_Prompts\\Keyboard & Mouse\\Blanks\\Blank_White_Mouse.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WiiU_Dpad.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WiiU_Dpad.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled_purple space.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tiled_purple space.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Space Shooter/Backgrounds/9bca92da2d3a7e7c50e16c4a59f794907d14514d5a109febdeb101e82888979c_tiled_purple space.png",
+          "name": "tiled_purple space.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled_Parallax Background Sky.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tiled_Parallax Background Sky.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Platformer Pack/Backgrounds/303843591493620bd620aabe58e3cc6de8219999db9c23edb60dbbbac25d1e8b_tiled_Parallax Background Sky.png",
+          "name": "tiled_Parallax Background Sky.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PS5_Dpad.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PS5_Dpad.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/CarterOne-Regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "44aceaa249d2ecb8bfe3eb7bedcb17aac44c0f5f13f9f58d85427a5afa7e92f0_CarterOne-Regular.ttf",
+        "userAdded": true,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/44aceaa249d2ecb8bfe3eb7bedcb17aac44c0f5f13f9f58d85427a5afa7e92f0_CarterOne-Regular.ttf",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Mouse_Left_Key_Light.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Mouse_Left_Key_Light.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "S_Key_Light.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "S_Key_Light.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "W_Key_Light.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "W_Key_Light.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "A_Key_Light.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "A_Key_Light.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "D_Key_Light.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "D_Key_Light.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Arrow_Right_Key_Light.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Arrow_Right_Key_Light.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Sin título.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sin título.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1374,7 +1501,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.9739640684568226,
+        "zoomFactor": 1.00680645833148,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1459,9 +1586,9 @@
           "layer": "",
           "name": "Settings",
           "persistentUuid": "d1231d80-7115-4993-b707-58f2c85c8c5c",
-          "width": 334,
-          "x": 288,
-          "y": 256,
+          "width": 352,
+          "x": 224,
+          "y": 246,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1487,71 +1614,11 @@
           "customSize": true,
           "height": 76,
           "layer": "",
-          "name": "SoundVolume",
-          "persistentUuid": "577f5311-3be9-4c31-a8cd-b80b8d65ffa8",
-          "width": 138,
-          "x": 1211,
-          "y": 146,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 50,
-          "layer": "",
-          "name": "MusicVolume",
-          "persistentUuid": "d0861843-5053-486e-ae25-db876e6903aa",
-          "width": 138,
-          "x": 1211,
-          "y": 242,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 28,
-          "layer": "",
-          "name": "SoundSlider",
-          "persistentUuid": "2fb11ddd-f78f-4f3d-95eb-2c2362981c57",
-          "width": 384,
-          "x": 1088,
-          "y": 192,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 32,
-          "layer": "",
-          "name": "MusicSlider",
-          "persistentUuid": "0f5e7ef3-7df4-465f-88ef-79e2321de786",
-          "width": 384,
-          "x": 1088,
-          "y": 288,
-          "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 76,
-          "layer": "",
           "name": "Back",
           "persistentUuid": "7b3e103f-83ec-4cac-874f-195e4e36f73d",
           "width": 110,
-          "x": 1225,
-          "y": 352,
+          "x": 1234,
+          "y": 384,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -1583,6 +1650,22 @@
           "x": 1056,
           "y": -160,
           "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 224,
+          "layer": "",
+          "name": "NewSprite",
+          "persistentUuid": "ae5bad69-e1fe-474d-89a8-104106f13c46",
+          "width": 416,
+          "x": 1056,
+          "y": 160,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1683,7 +1766,7 @@
             }
           ],
           "content": {
-            "text": "Settings",
+            "text": "Instrucciones",
             "opacity": 255,
             "scale": 2,
             "fontSize": 20,
@@ -2045,6 +2128,66 @@
               "width": 22
             }
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sin título.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 917,
+                            "y": 0
+                          },
+                          {
+                            "x": 917,
+                            "y": 523
+                          },
+                          {
+                            "x": 0,
+                            "y": 523
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2082,6 +2225,9 @@
           },
           {
             "objectName": "MusicSlider"
+          },
+          {
+            "objectName": "NewSprite"
           }
         ]
       },
@@ -2605,7 +2751,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": false,
-        "zoomFactor": 1.3389693172845611,
+        "zoomFactor": 2.599152591679695,
         "windowMask": false
       },
       "objectsGroups": [
@@ -8045,6 +8191,18 @@
                         "200",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlayMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "Musica para juego\\P2 1.wav",
+                        "",
+                        "30",
+                        "1"
+                      ]
                     }
                   ]
                 },
@@ -9012,123 +9170,6 @@
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
-        }
-      ]
-    },
-    {
-      "b": 209,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "UX",
-      "name": "UX",
-      "r": 209,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
-      "uiSettings": {
-        "grid": false,
-        "gridType": "rectangular",
-        "gridWidth": 32,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridColor": 10401023,
-        "gridAlpha": 0.8,
-        "snap": false,
-        "zoomFactor": 0.9114583333333334,
-        "windowMask": false
-      },
-      "objectsGroups": [],
-      "variables": [],
-      "instances": [],
-      "objects": [
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "NewSprite",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": []
-        }
-      ],
-      "objectsFolderStructure": {
-        "folderName": "__ROOT",
-        "children": [
-          {
-            "objectName": "NewSprite"
-          }
-        ]
-      },
-      "events": [],
-      "layers": [
-        {
-          "ambientLightColorB": 200,
-          "ambientLightColorG": 200,
-          "ambientLightColorR": 200,
-          "camera3DFarPlaneDistance": 10000,
-          "camera3DFieldOfView": 45,
-          "camera3DNearPlaneDistance": 3,
-          "cameraType": "",
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "isLocked": false,
-          "name": "",
-          "renderingType": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": [
-            {
-              "effectType": "Scene3D::HemisphereLight",
-              "name": "3D Light",
-              "doubleParameters": {
-                "elevation": 45,
-                "intensity": 1,
-                "rotation": 0
-              },
-              "stringParameters": {
-                "groundColor": "64;64;64",
-                "skyColor": "255;255;255",
-                "top": "Y-"
-              },
-              "booleanParameters": {}
-            }
-          ]
-        }
-      ],
-      "behaviorsSharedData": [
-        {
-          "name": "Effect",
-          "type": "EffectCapability::EffectBehavior"
-        },
-        {
-          "name": "FlashTransitionPainter",
-          "type": "FlashTransitionPainter::FlashTransitionPainter"
-        },
-        {
-          "name": "Flippable",
-          "type": "FlippableCapability::FlippableBehavior"
-        },
-        {
-          "name": "Resizable",
-          "type": "ResizableCapability::ResizableBehavior"
-        },
-        {
-          "name": "Scale",
-          "type": "ScalableCapability::ScalableBehavior"
         }
       ]
     }

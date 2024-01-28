@@ -21,7 +21,7 @@
     "useExternalSourceFiles": false,
     "version": "1.0.0",
     "name": "CANUTITO WADE COMBAT",
-    "description": "El juego se basa en disparar, desde el trasero y derrotar a los enemigos de risa :)\n\nAUTORES:\nDIEGO FREIJO\nNIKI CRESCENZI\nSOFI PODESTA\nEZEQUIEL SALGADO\nLEGAL VERONICA",
+    "description": "El juego se basa en disparar, desde el trasero y derrotar a los enemigos de risa :)\n\nAUTORES:\nDIEGO FREIJO\nNIKI CRESCENZI\nSOFI PODESTA\nEZEQUIEL SALGADO\nLEGAL VERONICA\nCAMILO GENCARELLI\nKURARA CATTANEO ESNAOLA",
     "author": "",
     "windowWidth": 768,
     "windowHeight": 432,
@@ -57,12 +57,12 @@
       "ios-icon-76": "ios-icon-76.png",
       "ios-icon-80": "ios-icon-80.png",
       "ios-icon-87": "ios-icon-87.png",
-      "liluo-thumbnail": "thumbnail.png"
+      "liluo-thumbnail": "Canutito4.png"
     },
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
-      "backgroundImageResourceName": "",
+      "backgroundImageResourceName": "Canutito3.png",
       "gdevelopLogoStyle": "light",
       "logoAndProgressFadeInDuration": 0.2,
       "logoAndProgressLogoFadeInDelay": 0.2,
@@ -81,7 +81,11 @@
     },
     "authorIds": [],
     "authorUsernames": [],
-    "categories": [],
+    "categories": [
+      "jam",
+      "action",
+      "shooter"
+    ],
     "playableDevices": [],
     "extensionProperties": [],
     "platforms": [
@@ -1410,6 +1414,34 @@
         "name": "Disparo.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Canutito3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Canutito3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Canutito4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Canutito4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "Pedo 2.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Pedo 2.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1573,7 +1605,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7469963409017276,
+        "zoomFactor": 2.306866341051145,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2730,9 +2762,13 @@
           "actions": [
             {
               "type": {
-                "value": "Quit"
+                "value": "PlaySound"
               },
               "parameters": [
+                "",
+                "Pedo 2.wav",
+                "",
+                "",
                 ""
               ]
             }
@@ -2934,7 +2970,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": false,
-        "zoomFactor": 1.2952916551236153,
+        "zoomFactor": 1.4307927813134538,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3003,14 +3039,14 @@
               "folded": true,
               "name": "Payasos",
               "type": "number",
-              "value": 1
+              "value": 5
             },
             {
               "folded": true,
               "name": "Tiki",
               "persistentUuid": "ea98fb09-bddd-4a90-891b-3f1a78485be7",
               "type": "number",
-              "value": 1
+              "value": 2
             }
           ]
         },
@@ -8761,7 +8797,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Leveling",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8886,6 +8921,36 @@
                         "",
                         "\"LevelUp\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "PayasosRestantes",
+                        "=",
+                        "5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "TikisRestantes",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "BananasRestantes",
+                        "=",
+                        "1"
+                      ]
                     }
                   ]
                 }
@@ -8979,16 +9044,6 @@
                             "+",
                             "1"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Nivel2\"",
-                            ""
-                          ]
                         }
                       ]
                     },
@@ -9025,16 +9080,6 @@
                             "FireBullet",
                             "=",
                             "Gun.FireBullet::Cooldown()*0.9",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Nivel2\"",
                             ""
                           ]
                         }

@@ -1383,6 +1383,15 @@
         "name": "Canutito (1).png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Canutito 2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Canutito 2.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1546,7 +1555,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.00680645833148,
+        "zoomFactor": 0.7469963409017276,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1578,22 +1587,6 @@
       ],
       "instances": [
         {
-          "angle": 357,
-          "customSize": true,
-          "depth": 1,
-          "height": 169,
-          "layer": "Title",
-          "name": "Title",
-          "persistentUuid": "e085a9cb-0111-4e77-9c02-bf87d81facd0",
-          "width": 505,
-          "x": 163,
-          "y": 40,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
           "angle": 0,
           "customSize": true,
           "height": 50,
@@ -1601,8 +1594,8 @@
           "name": "Play",
           "persistentUuid": "bd030748-dd27-4603-86f0-e028af4a1216",
           "width": 102,
-          "x": 333,
-          "y": 191,
+          "x": 314,
+          "y": 238,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -1616,8 +1609,8 @@
           "name": "Quit",
           "persistentUuid": "59cdd634-4e45-4367-930c-ee8d259b34f0",
           "width": 98,
-          "x": 335,
-          "y": 328,
+          "x": 315,
+          "y": 353,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -1632,24 +1625,9 @@
           "name": "Settings",
           "persistentUuid": "d1231d80-7115-4993-b707-58f2c85c8c5c",
           "width": 352,
-          "x": 224,
-          "y": 246,
+          "x": 200,
+          "y": 292,
           "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 32,
-          "layer": "",
-          "name": "Marker",
-          "persistentUuid": "97fbd7e1-d18e-4db4-9b32-aa44006ba598",
-          "width": 768,
-          "x": 0,
-          "y": 0,
-          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1711,6 +1689,22 @@
           "x": 1056,
           "y": 160,
           "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 429,
+          "layer": "",
+          "name": "NewSprite3",
+          "persistentUuid": "9d8d5c7e-dc6e-4e22-af94-b2aa492dd0f3",
+          "width": 769,
+          "x": -1,
+          "y": 1,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2293,6 +2287,66 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite3",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Canutito 2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1920,
+                            "y": 0
+                          },
+                          {
+                            "x": 1920,
+                            "y": 1080
+                          },
+                          {
+                            "x": 0,
+                            "y": 1080
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2336,6 +2390,9 @@
           },
           {
             "objectName": "NewSprite2"
+          },
+          {
+            "objectName": "NewSprite3"
           }
         ]
       },
